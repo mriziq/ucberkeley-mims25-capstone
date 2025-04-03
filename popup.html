@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prompt Enhancer for ChatGPT & Gemini</title>
+  <link rel="stylesheet" type="text/css" href="styles/popup.css">
+  <!-- Add the Google AI SDK -->
+  <script src="https://ai.google.com/js/api.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Prompt Enhancer</h1>
+    <p class="subtitle">Supports ChatGPT & Google Gemini</p>
+    
+    <!-- API Key Configuration -->
+    <div class="api-config">
+      <input type="password" id="apiKeyInput" placeholder="Enter Gemini API Key">
+      <button id="saveApiKey">Save API Key</button>
+    </div>
+    
+    <div class="content">
+      <div id="originalPrompt" class="prompt-box">
+        <h3>Original Prompt</h3>
+        <p id="originalText">No prompt imported yet</p>
+      </div>
+      <div id="enhancedPrompt" class="prompt-box">
+        <h3>Enhanced Prompt</h3>
+        <p id="enhancedText">Enhanced prompt will appear here</p>
+      </div>
+      <div class="button-group">
+        <button id="importButton">Import Prompt</button>
+        <button id="enhanceButton" disabled>Enhance Prompt</button>
+        <button id="copyButton" disabled>Copy to Clipboard</button>
+        <button id="insertButton" disabled>Insert Enhanced Prompt</button>
+      </div>
+    </div>
+    
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="loading-spinner hidden"></div>
+  </div>
+  <script src="scripts/popup.js"></script>
+</body>
+</html> 
